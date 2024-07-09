@@ -1,8 +1,8 @@
 env:
     credentials: "ENCRYPTED[!4478c21ff0f8df2ddf720bf2f67b97b537fbf208b358cc243fedc68559c10e5021b68ca3a028934e45aaf5ad350d8c55!]"
     rcloneconfig: "ENCRYPTED[!ffd3565aeb58aa3b44622841c293bbd8e6ac2e9f80953362b8ef18d5601330d888a145f3105bb64dd9934244563bf233!]"
-    tokentl: "ENCRYPTED[!c07de33b1227d4decd64465c0d9038b42b5635ce998f6edb5b02985176f81e9af4d0537ac8938cb79e5434bf5802f64d!]"
-    idtl: "ENCRYPTED[!619d9a2e4f770e5d94313f5c22971ad8ab19221a07cbe0757e76638cbe19b99b946c3355dcceb2d17c4b721da68f261e!]"
+    tokentl: "ENCRYPTED[!571d04ea053035073816279263b7d2746e7e63e393847c255e006f68e394b6e187b8152f309b98a2303b5a7887154f60!]"
+    idtl: "ENCRYPTED[!4ff30d03d66636a520e9a32b12d02838c7b624b98485fe30c4730af51210b6a52fa391532e4a8989cb7daede7dc671ec!]"
     lunch: lunch qassa_RMX2020-user
     make: mka qassa
 
@@ -18,12 +18,12 @@ task:
        - export DEBIAN_FRONTEND=noninteractive
        - mkdir -p ~/.config/rclone
        - echo "$rcloneconfig" > ~/.rclone.conf
-       - git config --global user.name "picasso09"
-       - git config --global user.email "picasso09@hotmail.com"
+       - git config --global user.name "MeAbidin"
+       - git config --global user.email "dintzonly17@gmail.com"
        - echo "$credentials" > ~/.git-credentials
        - git config --global credential.helper store --file=~/.git-credentials
        - mkdir -p ~/ccache
-       - rclone copy RMX2185:qassa/ccache.tar.gz ~/ -P
+       - rclone copy RMX2020:qassa/ccache.tar.gz ~/ -P
        - cd ~/
        - time tar xf ccache.tar.gz
        - cd ~/
@@ -45,13 +45,13 @@ task:
 #      - repoo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 --fail-fast
       - repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
       - sed -i 's| -u||g' vendor/qassa/config/branding.mk
-      - git clone --depth=1 https://github.com/picasso09/device_realme_RMX2020 -b qassa device/realme/RMX2020
+      - git clone --depth=1 https://github.com/MeAbidin/device_realme_RMX2020 -b Qassa-1 device/realme/RMX2020
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Sync Completed!"
 
   Build_script:
-      - export BUILD_USERNAME="picasso09"
+      - export BUILD_USERNAME="Meabidin"
       - export BUILD_HOSTNAME="DV-WORK"
-      - export KBUILD_BUILD_USER="picasso09"
+      - export KBUILD_BUILD_USER="MeAbidin"
       - export KBUILD_BUILD_HOST="DV-WORK"
 #      - export WITH_GAPPS=true
       - sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -66,6 +66,6 @@ task:
       - ./ziping.sh
       - cd ~/
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Uploading ccache...."
-      - rclone copy ccache.tar.gz RMX2185:qassa -P
+      - rclone copy ccache.tar.gz RMX2020:qassa -P
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Ccache Uploaded Successfully!"
 
