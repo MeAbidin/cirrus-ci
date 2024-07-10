@@ -50,9 +50,9 @@ task:
 
   Build_script:
       - export BUILD_USERNAME="Meabidin"
-      - export BUILD_HOSTNAME="DV-WORK"
+      - export BUILD_HOSTNAME="Woodyy17"
       - export KBUILD_BUILD_USER="MeAbidin"
-      - export KBUILD_BUILD_HOST="DV-WORK"
+      - export KBUILD_BUILD_HOST="Woodyy17"
 #      - export WITH_GAPPS=true
       - sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Build qassa for RMX2020 Started!"
