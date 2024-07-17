@@ -20,8 +20,8 @@ task:
        - echo "$rcloneconfig" > ~/.rclone.conf
        - git config --global user.name "MeAbidin"
        - git config --global user.email "dintzonly17@gmail.com"
-       - echo "$credentials" > ~/.git-credentials
        - git config --global credential.helper store --file=~/.git-credentials
+       - echo "$credentials:x-oauth-basic@github.com" > ~/.git-credentials
        - mkdir -p ~/ccache
        - rclone copy RMX2020:nusantara/ccache.tar.gz ~/ -P
        - cd ~/
