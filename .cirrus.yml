@@ -1,7 +1,7 @@
 env:
     credentials: "ENCRYPTED[!6b2e1cab73bc245f59a65a72c54363c436215330f1d02d97d7ca84d037d0bb69c6c1e46c87eeaaf5a8cb13fb057e4c11!]"
     rcloneconfig: "ENCRYPTED[!9dd3f79ceb94286194668415bd8504a3d2e2aaf6569d9bc8226838dfa4f7ca516ad7b3e6f290b2d74ec6b2d577983f43!]"
-    tokentl: "ENCRYPTED[!d167e56e40cf1f643ec7aaa9e5acfa30877d409da15d199596a2e164ef64361db7b07dae620389b91414d354052a5d12!]"
+    tokentl: "ENCRYPTED[!99a074fbf2f0a9f8424af4cc3e7a5dd0b92631ce82cc60aaca4e2c12b26baf7e0ca8e1800f7ae75844bb3aa54eb04aa9!]"
     idtl: "ENCRYPTED[!d266d83de82272fa43816c32ec86495d2f91a444c1d86b1cf4f58d44e7fd7bb9643ca23eb4f086596883202f76c1fcbf!]"
     lunch: lunch nad_RMX2020-user
     make: make nad
