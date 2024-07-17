@@ -1,5 +1,5 @@
 env:
-    credentials: "ENCRYPTED[!666a103cc67ef0bdce1a046ee4f382a3cce0b5867cc1b38b24b52236d45f82ecbd63181e02334d46bc15e9d4f2836b6c!]"
+    credentials: "ENCRYPTED[!6b2e1cab73bc245f59a65a72c54363c436215330f1d02d97d7ca84d037d0bb69c6c1e46c87eeaaf5a8cb13fb057e4c11!]"
     rcloneconfig: "ENCRYPTED[!9dd3f79ceb94286194668415bd8504a3d2e2aaf6569d9bc8226838dfa4f7ca516ad7b3e6f290b2d74ec6b2d577983f43!]"
     tokentl: "ENCRYPTED[!d167e56e40cf1f643ec7aaa9e5acfa30877d409da15d199596a2e164ef64361db7b07dae620389b91414d354052a5d12!]"
     idtl: "ENCRYPTED[!d266d83de82272fa43816c32ec86495d2f91a444c1d86b1cf4f58d44e7fd7bb9643ca23eb4f086596883202f76c1fcbf!]"
@@ -21,7 +21,7 @@ task:
        - git config --global user.name "MeAbidin"
        - git config --global user.email "dintzonly17@gmail.com"
        - git config --global credential.helper store --file=~/.git-credentials
-       - echo "$credentials:x-oauth-basic@github.com" > ~/.git-credentials
+       - echo "$credentials" > ~/.git-credentials
        - mkdir -p ~/ccache
        - rclone copy RMX2020:nusantara/ccache.tar.gz ~/ -P
        - cd ~/
